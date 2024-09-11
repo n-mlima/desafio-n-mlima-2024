@@ -39,4 +39,4 @@ Este projeto é um desafio técnico onde você deve construir uma lógica em Jav
 
 3. **Funcionalidade**
 
-   Desenvolva uma função que analise os recintos disponíveis e determine quais são viáveis para alocar uma quantidade específica de um animal, considerando o bioma e o espaço disponível.
+   Desenvolver uma função que analise os recintos disponíveis e determine quais são viáveis para alocar uma quantidade específica de um animal, considerando o bioma e o espaço disponível.
