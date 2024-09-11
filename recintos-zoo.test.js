@@ -36,5 +36,25 @@ describe('Recintos do Zoologico', () => {
       expect(resultado.recintosViaveis.length).toBe(3);
   });
 
+  test('Deve retornar erro "Animal inválido" para UNICORNIO', () => {
+    const resultado = new RecintosZoo().analisaRecintos('UNICORNIO', 1);
+    expect(resultado.erro).toBe("Animal inválido");
+  });
+
+  test('Deve retornar erro "Quantidade inválida" para quantidade negativa', () => {
+    const resultado = new RecintosZoo().analisaRecintos('LEAO', -1);
+    expect(resultado.erro).toBe("Quantidade inválida");
+  });
+
+  test('Deve retornar erro "Não há recinto viável" para HIPOPOTAMO', () => {
+    const resultado = new RecintosZoo().analisaRecintos('HIPOPOTAMO', 3);
+    expect(resultado.erro).toBe("Não há recinto viável");
+  });
+
+  test('Deve retornar que não há recinto viável para LEOPARDO (quantidade: 1)', () => {
+    const resultado = new RecintosZoo().analisaRecintos('LEOPARDO', 1);
+    expect(resultado).toEqual({ erro: "Não há recinto viável" });
+  });
 });
+
 
